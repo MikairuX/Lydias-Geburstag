@@ -1,0 +1,112 @@
+body, .container {
+  font-family: 'Georgia', cursive;
+  background-color: #fff0f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+
+    .header {
+      background-color: #800f2f;
+      color: #fff0f3;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      flex-direction: column;
+      width: 95%;
+
+      
+    }
+
+    .title {
+      font-size: 1.8em;
+      font-style: italic;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      font-style: italic;
+     
+    }
+
+
+    .voucher-card {
+      background-color: #ffccd5;
+      width: 95%;
+      
+      border: 2px solid #a4133c;
+      position: relative;
+      height: 140px;
+      display: flex;
+      flex-grow: 1;
+      
+      
+    }
+
+    .js-used-voucher-card{
+      filter: grayscale(100%);
+     
+    }
+
+    .decor-top-left, .decor-bottom-right {
+      position: absolute;
+      width: 65%;
+      height: 45%;
+      border: 8px solid #c9184a;
+    }
+
+    .decor-top-left {
+      top: 10px;
+      left: 10px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .decor-bottom-right {
+      bottom: 10px;
+      right: 10px;
+      border-left: none;
+      border-top: none;
+    }
+
+    .voucher-text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.7em;
+      font-style: italic;
+      color: #590d22;
+      text-align: center;
+    }
+
+      .voucher-quantity, .validation-question {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1em;
+      font-style: italic;
+      color: #590d22;
+      text-align: center;
+    }
+
+    .validation-question {
+      opacity: 0%;
+       top: 75%;
+     
+    }
+
+  .validation-question-visible{
+    opacity: 100%;
+  }
+
+
+
+    
+    
