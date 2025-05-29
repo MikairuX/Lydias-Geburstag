@@ -1,113 +1,151 @@
+/* Base layout – mobile-first and scalable */
 body, .container {
   font-family: 'Georgia', cursive;
   background-color: #fff0f3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+.header {
+  background-color: #800f2f;
+  color: #fff0f3;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .header {
-      background-color: #800f2f;
-      color: #fff0f3;
-      height: 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      flex-direction: column;
-      width: 95%;
+.title {
+  font-size: 3.5em;
+  font-style: italic;
+  margin: 0.2em 0;
+}
 
-      
-    }
+.subtitle {
+  font-size: 2.5em;
+  font-style: italic;
+  margin: 0.2em 0;
+}
 
-    .title {
-      font-size: 3.6em;
-      font-style: italic;
-    }
+.voucher-card {
+  background-color: #ffccd5;
+  width: 100%;
+  border: 2px solid #a4133c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
 
-    .subtitle {
-      font-size: 3em;
-      font-style: italic;
-     
-    }
+.js-used-voucher-card {
+  filter: grayscale(100%);
+}
 
+.decor-top-left, .decor-bottom-right {
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  border: 6px solid #c9184a;
+  pointer-events: none;
+}
 
-    .voucher-card {
-      background-color: #ffccd5;
-      width: 95%;
-      
-      border: 2px solid #a4133c;
-      position: relative;
-      height: 140px;
-      display: flex;
-      flex-grow: 1;
-      min-height: 500px;
-      
-      
-    }
+.decor-top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
 
-    .js-used-voucher-card{
-      filter: grayscale(100%);
-     
-    }
+.decor-bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
 
-    .decor-top-left, .decor-bottom-right {
-      position: absolute;
-      width: 65%;
-      height: 45%;
-      border: 8px solid #c9184a;
-    }
+/* Instead of absolute, use normal text flow */
+.voucher-text {
+  font-size: 2.5em;
+  font-style: italic;
+  color: #590d22;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .decor-top-left {
-      top: 10px;
-      left: 10px;
-      border-right: none;
-      border-bottom: none;
-    }
+.voucher-quantity,
+.validation-question {
+  font-size: 1.8em;
+  font-style: italic;
+  color: #590d22;
+  text-align: center;
+  margin-top: 10px;
+}
 
-    .decor-bottom-right {
-      bottom: 10px;
-      right: 10px;
-      border-left: none;
-      border-top: none;
-    }
+.validation-question {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-    .voucher-text {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.7em;
-      font-style: italic;
-      color: #590d22;
-      text-align: center;
-    }
+.validation-question-visible {
+  opacity: 1;
+}
 
-      .voucher-quantity, .validation-question {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1em;
-      font-style: italic;
-      color: #590d22;
-      text-align: center;
-    }
-
-    .validation-question {
-      opacity: 0%;
-       top: 75%;
-     
-    }
-
-  .validation-question-visible{
-    opacity: 100%;
+/* ↓↓ Scale down text and layout on tablets ↓↓ */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.8em;
   }
 
+  .subtitle {
+    font-size: 2em;
+  }
 
+  .voucher-text {
+    font-size: 1.8em;
+  }
 
-    
-    
+  .voucher-quantity,
+  .validation-question {
+    font-size: 1.2em;
+  }
+
+  .voucher-card {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .voucher-card > * {
+    flex: 1;
+  }
+}
+
+/* ↓↓ More adjustments for desktop ↓↓ */
+@media (min-width: 1024px) {
+  .header {
+    max-width: 95%;
+    padding: 30px;
+  }
+
+  .voucher-card {
+    max-width: 95%;
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 3.2em;
+  }
+
+  .subtitle {
+    font-size: 2.2em;
+  }
+}
