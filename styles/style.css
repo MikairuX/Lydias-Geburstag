@@ -12,7 +12,7 @@ body, .container {
     .header {
       background-color: #800f2f;
       color: #fff0f3;
-      height: 100px;
+      height: 250px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,12 +24,12 @@ body, .container {
     }
 
     .title {
-      font-size: 1.8em;
+      font-size: 3.6em;
       font-style: italic;
     }
 
     .subtitle {
-      font-size: 1.5em;
+      font-size: 3em;
       font-style: italic;
      
     }
@@ -44,7 +44,7 @@ body, .container {
       height: 140px;
       display: flex;
       flex-grow: 1;
-      min-height: 250px;
+      min-height: 500px;
       
       
     }
