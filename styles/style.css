@@ -119,7 +119,7 @@ body, .container {
   }
 
   .voucher-card {
-    flex-direction: row;
+    flex-direction: colum;
     justify-content: space-between;
     text-align: left;
   }
